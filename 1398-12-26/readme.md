@@ -1,13 +1,8 @@
 1398-12-26
-    Install faker
-        generate massive amounts of fake data in the browser
-    Install @types/faker
-        This package contains type definitions for faker (http://marak.com/faker.js/).
-    Generate a Google Dev Project
-        at http://console.developers.google.com
-    Enable Google Maps support inside the project
-    Generate an API key
-    Add the google maps script tag to our HTML file
-    Install @types/googlemaps
-        This package contains type definitions for Google Maps JavaScript API 
+    Use interface to write better
+        use interface in CustomMap.ts
+    Add popup window above the map
+        An InfoWindow displays content (usually text or images) in a popup window above the map, at a given location. The info window has a content area and a tapered stem. The tip of the stem is attached to a specified location on the map.
+    Add markerContent 'method' in interface
+        for show detail user and company
         
