@@ -1,18 +1,22 @@
-import fs from 'fs';
+// import fs from 'fs';
+import { CsvFileReader } from './CsvFileReader';
 
-const matches = fs.readFileSync('football.csv', {
-    encoding: 'utf-8'
-})
-.split('\n')
-.map(
-    (row: string): string[] => {
-    return row.split(',');
-    }
-);
+// const matches = fs.readFileSync('football.csv', {
+//     encoding: 'utf-8'
+// })
+// .split('\n')
+// .map(
+//     (row: string): string[] => {
+//     return row.split(',');
+//     }
+// );
 
 // const homeWin = 'H';
 // const awayWin = 'A';
 // const draw = 'D';
+
+const reader = new CsvFileReader('football.csv');
+reader.read();
 
 // enum - enumeration
 enum MatchResult {
@@ -23,7 +27,8 @@ enum MatchResult {
 
 let manUnitedWins = 0;
 
-for (let match of matches) {
+// for (let match of matches) {
+for (let match of reader.data) {
     if (match[4] === 'Man United' && match[7] === MatchResult.HomeWin) {
         manUnitedWins++;
     }
